@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: hahmlet, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #51aeda, #2598ce);
+}
+header{
+    font-size:2rem;
+    color:white;
+}
+header, form{
+    min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin:1.5px;
+    border: none;
+    background:white;
+}
+
+.search-button {
+    background-color: rgb(240, 240, 240);
+}
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
