@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  body{
+    font-family: hahmlet, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #51aeda, #2598ce);
+  }
+  header{
+    
+    font-size:2rem;
+    color:white;
+    line-height: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .translate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vh;
+    height: 30vh;
+    resize:none;
+    margin:2em;
+    outline:none;
+  }
+   
+  .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(3vh);
+  }
+    
+  .btn1,.btn2{
+    border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      width: 6em;
+    font-size: small;
+      min-height: 3em;
+      margin:10px 120px 10px 120px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+.newBtn{
+  display: flex;
+  justify-content:baseline;
+  align-items:baseline;
+  flex-direction: column;
+  transform: translateY(10vh);
+}
+.btn3{
+  border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      width: 10em;
+    font-size: small;
+      min-height: 3em;
+    margin:10px 120px 10px 120px;
+      cursor: pointer;
+      font-size: 16px;
+}
+
+
+.cardbtn{
+  transform:translateY(30vh)
+}
+.txt_Container{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10em;
+}
+
+
+.original_Text{
+  word-wrap:normal;
+overflow:hidden;
+  width:500px;
+  
+}
+
+.translated_Text{
+  word-wrap:normal;
+overflow:hidden;
+ width:500px;
+  
+}
+
+.db_Container{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20em;
+  
+}
+.column_one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:solid white;
+  width:20rem;
+  height:35rem;
+  transform:translateY(10vh)
+}
+.column_two{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:solid white;
+  width:20rem;
+  height:35rem;
+  transform:translateY(10vh)
+}
+
+.dbBtn{
+  transform: translateY(1rem);
+}
+.translator{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  transform: translateY(-21rem);
+  
+}
+
+
+textarea{
+  resize:none;
+  outline: none;
+  margin:1em;
+}
