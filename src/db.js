@@ -1,10 +1,23 @@
 import './App.css';
 import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import {useEffect} from 'react';
 
 
 function DB(props){
- //column_two will no longer host props.trn2, but will represent an array of values translated word by word from text that needs
- //to be translated
+
+  const [highlightedText, setHighlightedText] = useState('');
+  useEffect(() => {
+    const saveSelection = () => {
+      setHighlightedText(window.getSelection().toString());
+    };
+    document.addEventListener('mouseup', saveSelection);
+    return () => document.removeEventListener('mouseup', saveSelection);
+ },[]);
+   const preD = (event)=> {
+    event.preventDefault();
+   }
+   
     return(
    <div className='Database'>
     <form>
@@ -26,8 +39,8 @@ function DB(props){
       </div>
     </form>
     <div className='translator'>
-          <textarea id='for_lang' className='for_lang'rows="4" cols="15"></textarea>
-          <textarea id='Nat_lang'classname='Nat_lang'rows="4" cols="15"></textarea>
+          <textarea id='for_lang' className='for_lang'rows="4" cols="15" onMouseDown={preD} value={highlightedText} onChange={DB}></textarea>
+          <textarea id='Nat_lang'className='Nat_lang'rows="4" cols="15" onMouseDown={preD}></textarea>
         </div>
    </div>
     );
