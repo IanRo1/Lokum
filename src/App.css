@@ -106,6 +106,7 @@ overflow:hidden;
   justify-content: space-between;
   column-gap: 20em;
   
+  
 }
 .column_one{
   display: flex;
@@ -115,10 +116,14 @@ overflow:hidden;
   border:solid white;
   width:20rem;
   height:35rem;
-  transform:translateY(10vh)
+  transform:translateY(10vh);
+  white-space: pre-wrap;
+  
 }
+
+
 .column_two{
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -126,6 +131,7 @@ overflow:hidden;
   width:20rem;
   height:35rem;
   transform:translateY(10vh)
+  
 }
 
 .dbBtn{
@@ -135,13 +141,30 @@ overflow:hidden;
   display: flex;
   justify-content: center;
   align-items:center;
-  transform: translateY(-21rem);
+  transform: translateY(-35rem);
   
 }
-
 
 textarea{
   resize:none;
   outline: none;
   margin:1em;
+}
+.getTxt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:5rem;
+  height:1.5rem;
+  transform: translate(-40em,41rem);
+}
+
+.p_Text2{
+  
+  text-decoration: underline;
+}
+ol{
+  transform: translateY(-15rem);
+  display:inline-flex;
+  padding: .20rem;
 }
