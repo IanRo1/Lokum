@@ -15,35 +15,36 @@ function DB(props){
     document.addEventListener('mouseup', saveSelection);
     return () => document.removeEventListener('mouseup', saveSelection);
  },[]);
+
  let columntwo_Data = [
-  {results:'apiresults1', id:0},
+  {results:'apiresults1',id:1},
   {results:'apiresults2',id:1},
-  {results:'apiresults3',id:2},
-  {results:'apiresults4',id:3},
-  {results:'apiresults5', id:4},
-  {results:'apiresults6', id:5}
+  {results:'apiresults3',id:1},
+  {results:'apiresults4',id:1},
+  {results:'apiresults5',id:1},
+  {results:'apiresults6',id:1}
 ]
  const drop = e =>{
   e.preventDefault();
   const card_id = e.dataTransfer.getData('card_id');
-
   const card =document.getElementById(card_id);
-
   card.style.display = 'block';
   e.target.appendChild(card);
  }
-
+ 
  const dragOver = e =>{
   e.preventDefault();
-  e.stopPropagation();
  }
+ const dragOver1 = e =>{
+  e.preventDefault();
+  e.stopPropagation();}
 
  const dragStart = e =>{
   const target = e.target;
-  e.dataTransfer.SetData('card_id',target.id );
+  e.dataTransfer.setData('card_id', target.id );
   setTimeout(() => {
     target.style.display="none";
-  }, 0);
+  },0 );
  }
 
    const preD = (event)=> {
@@ -56,11 +57,12 @@ function DB(props){
 
     let columntwo_Input = columntwo_Data.map(function(data){
       return <ol
-      id='card1'
+      id={data.id}
           className='api'
           draggable='true'
           onDragStart={dragStart}
-          onDragOver={dragOver} >
+          onDragOver={dragOver1} 
+          >
         {data.results}
         </ol>
     })

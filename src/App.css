@@ -164,7 +164,10 @@ textarea{
   text-decoration: underline;
 }
 ol{
-  transform: translateY(-12rem);
+  
   display:inline-flex;
-  padding: .20rem;
+  
+  cursor: pointer;
+  
 }
+
