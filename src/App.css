@@ -127,6 +127,7 @@ overflow:hidden;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: row;
   border:solid white;
   width:20rem;
   height:35rem;
@@ -166,7 +167,7 @@ textarea{
 ol{
   
   display:inline-flex;
-  
+  padding: .20rem;
   cursor: pointer;
   
 }

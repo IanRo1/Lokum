@@ -17,12 +17,12 @@ function DB(props){
  },[]);
 
  let columntwo_Data = [
-  {results:'apiresults1',id:1},
+  {results:'apiresults1',id:0},
   {results:'apiresults2',id:1},
-  {results:'apiresults3',id:1},
-  {results:'apiresults4',id:1},
-  {results:'apiresults5',id:1},
-  {results:'apiresults6',id:1}
+  {results:'apiresults3',id:2},
+  {results:'apiresults4',id:3},
+  {results:'apiresults5',id:4},
+  {results:'apiresults6',id:5}
 ]
  const drop = e =>{
   e.preventDefault();
@@ -79,12 +79,10 @@ function DB(props){
         </p>
         </div>
         <button className='getTxt'onClick={preD1} ></button>
-        <div className='column_two'>
-          <p 
-          onDrop={drop}
-          draggable = 'true'
-          onDragOver={dragOver}
-          className='p_Text2'>
+        <div className='column_two'
+        onDrop={drop}
+        onDragOver={dragOver} >
+          <p className='p_Text2'>
             {columntwo_Input}
         </p>
        </div>
