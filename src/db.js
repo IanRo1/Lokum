@@ -4,9 +4,9 @@ import React, { useState} from 'react';
 import {useEffect} from 'react';
 
 
+
 function DB(props){
-//column_two will have underlined areas to input translations manually.... or, re-arrange everything, two input boxes
-//on app.js, one with text, one translation, make everything underlined/drag and drop on db.js
+//Match Ids with input information in home.js
   const [highlightedText, setHighlightedText] = useState('');
   useEffect(() => {
     const saveSelection = () => {
@@ -16,34 +16,35 @@ function DB(props){
     return () => document.removeEventListener('mouseup', saveSelection);
  },[]);
 
+
+
  let columntwo_Data = [
-  {results:'apiresults1',id:0},
-  {results:'apiresults2',id:1},
-  {results:'apiresults3',id:2},
-  {results:'apiresults4',id:3},
-  {results:'apiresults5',id:4},
-  {results:'apiresults6',id:5}
+  {results:'apiresults1/',id:0},
+  {results:'apiresults2/',id:1},
+  {results:'apiresults3/',id:2},
+  {results:'apiresults4/',id:3},
+  {results:'apiresults5/',id:4},
+  {results:'apiresults6/',id:5}
 ]
  const drop = e =>{
   e.preventDefault();
   const card_id = e.dataTransfer.getData('card_id');
-  const card =document.getElementById(card_id);
+  const card = document.getElementById(card_id);
   card.style.display = 'block';
   e.target.appendChild(card);
  }
- 
+ /*swapItems(dragStartIndex, dragEndIndex) in drop*/
  const dragOver = e =>{
   e.preventDefault();
  }
- const dragOver1 = e =>{
-  e.preventDefault();
-  e.stopPropagation();}
+ const dragOver1 = (e) =>{
+  e.stopPropagation();
+}
 
  const dragStart = e =>{
-  const target = e.target;
-  e.dataTransfer.setData('card_id', target.id );
+  e.dataTransfer.setData('card_id', e.target.id );
   setTimeout(() => {
-    target.style.display="none";
+    e.target.style.display="none";
   },0 );
  }
 
@@ -57,16 +58,17 @@ function DB(props){
 
     let columntwo_Input = columntwo_Data.map(function(data){
       return <ol
-      id={data.id}
+      id={props.trn11}
           className='api'
           draggable='true'
           onDragStart={dragStart}
-          onDragOver={dragOver1} 
+          onDragOver={dragOver} 
+          onDrop={drop}
           >
         {data.results}
         </ol>
+        
     })
-
     /*<li value={i+1}></li> draggable onDragOver={(e)=>this.onDragOver(e)}*/
   
     return(
@@ -80,10 +82,9 @@ function DB(props){
         </div>
         <button className='getTxt'onClick={preD1} ></button>
         <div className='column_two'
-        onDrop={drop}
-        onDragOver={dragOver} >
+        onDragOver={dragOver1} >
           <p className='p_Text2'>
-            {columntwo_Input}
+            {props.trn2}
         </p>
        </div>
       </div>

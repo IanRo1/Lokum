@@ -8,17 +8,31 @@ function Home(props) {
   const charTxt=(e)=>{
     props.inputTextHandler(e);
   setChar(e.target.value);
-
+  }
+  const charTxt2=(e)=>{
+    props.inputTextHandler2(e);
+  setChar(e.target.value);
   }
    return (
      <div className="Home">
        <header>Lokum</header>
      <form>
       <p>Character Count = {char.length}/720</p>
+      <div className='home1'>
+        <div className='home2'>
      <textarea maxLength="720" value= {props.inputText} onChange={charTxt} className="translate" name="translate" rows="4" cols="50">
        </textarea>
        <div className='btns'>
        <button onClick={props.preventD1} className='btn1'> Save Text</button>
+       </div>
+       </div>
+       <div className='home3'>
+       <textarea maxLength="720" value= {props.inputText2} onChange={charTxt2} className="translate" name="translate" rows="4" cols="50">
+       </textarea>
+       <div className='btns'>
+       <button onClick={props.preventD2} className='btn2'> Save Text</button>
+       </div>
+       </div>
        </div>
        <div className='newBtn'>
        <Link to='DB'>

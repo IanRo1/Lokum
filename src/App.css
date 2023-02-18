@@ -9,8 +9,8 @@
     min-height: 100vh;
     background-image: linear-gradient(to right top, #51aeda, #2598ce);
   }
+
   header{
-    
     font-size:2rem;
     color:white;
     line-height: 5;
@@ -25,7 +25,20 @@
     align-items: center;
     flex-direction: column;
   }
-  
+
+  .home1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width:53em;
+  }
+  .home2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .translate{
     display: flex;
     justify-content: center;
@@ -75,8 +88,6 @@
       cursor: pointer;
       font-size: 16px;
 }
-
-
 .cardbtn{
   transform:translateY(30vh)
 }
@@ -105,8 +116,6 @@ overflow:hidden;
   display: flex;
   justify-content: space-between;
   column-gap: 20em;
-  
-  
 }
 .column_one{
   display: flex;
@@ -118,10 +127,7 @@ overflow:hidden;
   height:35rem;
   transform:translateY(10vh);
   white-space: pre-wrap;
-  
 }
-
-
 .column_two{
   display:flex;
   justify-content: center;
@@ -132,9 +138,7 @@ overflow:hidden;
   width:20rem;
   height:35rem;
   transform:translateY(10vh)
-  
 }
-
 .dbBtn{
   transform: translateY(1rem);
 }
@@ -143,7 +147,6 @@ overflow:hidden;
   justify-content: center;
   align-items:center;
   transform: translateY(-35rem);
-  
 }
 
 textarea{
