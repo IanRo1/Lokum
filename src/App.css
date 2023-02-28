@@ -25,7 +25,11 @@
     align-items: center;
     flex-direction: column;
   }
-  
+  input{
+    margin:7em;
+    height:2em;
+    width:25em;
+  }
   .home1{
     display: flex;
     justify-content: center;
@@ -39,6 +43,7 @@
     align-items: center;
     flex-direction: column;
   }
+  
   .translate{
     display: flex;
     justify-content: center;
@@ -149,11 +154,6 @@ overflow:hidden;
   transform: translateY(-35rem);
 }
 
-textarea{
-  resize:none;
-  outline: none;
-  margin:1em;
-}
 .getTxt{
   display: flex;
   justify-content: center;

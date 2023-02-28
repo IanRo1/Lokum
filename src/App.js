@@ -28,20 +28,16 @@ function App() {
     setInputText2("");
   }
 
-  const translaText1 = translateText.map(transText => (
-     transText.text.split(/\s+/).map(spltTxt =>{
-        return <li>{spltTxt}</li>
-     })
-     ))
+  const translaText1 = translateText.map(transText => {
+     return <li>{transText.text}</li>
+  })
      
      const translaText11 = translateText.map(transText => (
       transText.id
       ))
-     const translaText2 = translateText2.map(transText2 => (
-      transText2.text.split(/\s+/).map(spltTxt1 =>{
-        return <li>{spltTxt1}</li>
+     const translaText2 = translateText2.map(transText2 => {
+      return <li>{transText2.text}</li>
      })
-      ))
       const translaText22 = translateText2.map(transText2 => (
         transText2.id
         ))
@@ -50,8 +46,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
-          <Route path='DB' element={<DB trn={translaText1.slice(-1)[0]} trn2={translaText2.slice(-1)[0]}/>} trn11={translaText11} trn22={translaText22}/>
-          <Route path='/DB/Cards'  element={<Cards trn={translaText1.slice(-1)[0]} />}/>
+          <Route path='DB' element={<DB trn={translaText1} trn2={translaText2}/>} trn11={translaText11} trn22={translaText22}/>
+          <Route path='/DB/Cards'  element={<Cards trn={translaText1} />}/>
       </Routes>
 </Router>
     </div>
@@ -59,3 +55,9 @@ function App() {
 }
 
 export default App;
+/* To divide each array element by spaces: 
+  const translaText2 = translateText2.map(transText2 => (
+      transText2.text.split(/\s+/).map(spltTxt1 =>{
+        return <li>{spltTxt1}</li>
+     })
+     trn2={translaText2.slice(-1)[0]} */
