@@ -21,6 +21,7 @@ function Home(props) {
       <div className='home1'>
         <div className='home2'>
      <textarea maxLength="720" value= {props.inputText} onChange={charTxt} className="translate" name="translate" rows="4" cols="50">
+      <ol><li></li></ol>
        </textarea>
        <div className='btns'>
        <button onClick={props.preventD1} className='btn1'> Save Text</button>

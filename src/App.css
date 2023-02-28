@@ -25,7 +25,7 @@
     align-items: center;
     flex-direction: column;
   }
-
+  
   .home1{
     display: flex;
     justify-content: center;
@@ -161,17 +161,5 @@ textarea{
   width:5rem;
   height:1.5rem;
   transform: translate(-40em,41rem);
-}
-
-.p_Text2{
-  
-  text-decoration: underline;
-}
-ol{
-  
-  display:inline-flex;
-  padding: .20rem;
-  cursor: pointer;
-  
 }
 

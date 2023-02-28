@@ -29,13 +29,18 @@ function App() {
   }
 
   const translaText1 = translateText.map(transText => (
-     transText.text
+     transText.text.split(/\s+/).map(spltTxt =>{
+        return <li>{spltTxt}</li>
+     })
      ))
+     
      const translaText11 = translateText.map(transText => (
       transText.id
       ))
      const translaText2 = translateText2.map(transText2 => (
-      transText2.text
+      transText2.text.split(/\s+/).map(spltTxt1 =>{
+        return <li>{spltTxt1}</li>
+     })
       ))
       const translaText22 = translateText2.map(transText2 => (
         transText2.id
