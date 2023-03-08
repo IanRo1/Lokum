@@ -163,3 +163,32 @@ overflow:hidden;
   transform: translate(-40em,41rem);
 }
 
+.cards{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  column-gap: 3em;
+  flex-direction: row;
+  
+}
+
+.cards_container1{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  width:20rem;
+  height:35rem;
+  transform: translateY(10vh);
+}
+.cards_container2{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:20rem;
+  height:35rem;
+  transform:translateY(10vh);
+}

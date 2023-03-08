@@ -10,6 +10,8 @@ function App() {
   const [translateText, setTranslateText] = useState([]);
   const [inputText2, setInputText2] = useState("");
   const [translateText2, setTranslateText2] = useState([]);
+  const [translateText3, setTranslateText3] = useState([]);
+  const [translateText4, setTranslateText4] = useState([]);
 
   const inputTextHandler =(e) => {
     setInputText(e.target.value);
@@ -21,33 +23,38 @@ function App() {
     e.preventDefault();
     setTranslateText([...translateText,{text: inputText, completed:false, id: Math.random() *1000}])
     setInputText("");
+    setTranslateText3([...translateText,{text: inputText, completed:false, id: Math.random() *1000}])
   }
   const preventD2 = (e) =>{
     e.preventDefault();
-    setTranslateText2([...translateText2,{text: inputText2, completed:false, id: Math.random() *1000}])
+    setTranslateText2([...translateText2,{text: inputText2, completed:false, id: Math.random() *1000 }])
     setInputText2("");
+    setTranslateText4([...translateText2,{text: inputText2, completed:false, id: Math.random() *1000 }])
   }
 
   const translaText1 = translateText.map(transText => {
-     return <li>{transText.text}</li>
+     return <li id={transText.id}>{transText.text}</li>
   })
-     
-     const translaText11 = translateText.map(transText => (
-      transText.id
-      ))
      const translaText2 = translateText2.map(transText2 => {
-      return <li>{transText2.text}</li>
+      return <li id={transText2.id}>
+        {transText2.text}</li>
      })
-      const translaText22 = translateText2.map(transText2 => (
-        transText2.id
-        ))
+     const newestArray =[...translateText3.sort(() => Math.random() - 0.5)]
+
+     const newestArray2 =[...translateText4.sort(() => Math.random() - 0.5)]
+     const newArr =[newestArray.map(tText => {
+      return <li>{tText.text}</li>})];
+
+   const newArr2=[newestArray2.map(tText2 => {
+    return <li>{tText2.text}</li>})]
+      
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
-          <Route path='DB' element={<DB trn={translaText1} trn2={translaText2}/>} trn11={translaText11} trn22={translaText22}/>
-          <Route path='/DB/Cards'  element={<Cards trn={translaText1} />}/>
+          <Route path='DB' element={<DB trn={translaText1} trn2={translaText2}/>}/>
+          <Route path='/DB/Cards'  element={<Cards newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
       </Routes>
 </Router>
     </div>
