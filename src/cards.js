@@ -3,12 +3,14 @@ import React from 'react';
 
 
 function Cards(props){ 
-    //trn = trans01-4, new array of translated values in order = [trans1-4], matched with word translated in order from prev page
     
+    const choice =()=>{
+         console.log(props.newArr)
+    }
     return(
 <div className='cards'>
         <div className='cards_container1'>
-            <div className='card1'>{props.newArr[0]}</div>
+            <div className='card1'onClick={choice}>{props.newArr[0]}</div>
             <div className='card2'>{props.newArr[1]}</div>
             <div className='card3'>{props.newArr[2]}</div>
             <div className='card4'>{props.newArr[3]}</div>

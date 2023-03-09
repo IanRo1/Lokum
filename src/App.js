@@ -12,7 +12,9 @@ function App() {
   const [translateText2, setTranslateText2] = useState([]);
   const [translateText3, setTranslateText3] = useState([]);
   const [translateText4, setTranslateText4] = useState([]);
-
+  const [num,setNum]=useState(0);
+  const [num2,setNum2]=useState(0);
+  
   const inputTextHandler =(e) => {
     setInputText(e.target.value);
   }
@@ -21,15 +23,17 @@ function App() {
   }
   const preventD1 = (e) =>{
     e.preventDefault();
-    setTranslateText([...translateText,{text: inputText, completed:false, id: Math.random() *1000}])
+    setNum(num+1);
+    setTranslateText([...translateText,{text: inputText}])
     setInputText("");
-    setTranslateText3([...translateText,{text: inputText, completed:false, id: Math.random() *1000}])
+    setTranslateText3([...translateText3,{text: inputText, completed:false, id:num }])
   }
   const preventD2 = (e) =>{
     e.preventDefault();
-    setTranslateText2([...translateText2,{text: inputText2, completed:false, id: Math.random() *1000 }])
+    setTranslateText2([...translateText2,{text: inputText2}])
     setInputText2("");
-    setTranslateText4([...translateText2,{text: inputText2, completed:false, id: Math.random() *1000 }])
+    setTranslateText4([...translateText4,{text: inputText2, completed:false, id: num2 }])
+    setNum2(num2+1);
   }
 
   const translaText1 = translateText.map(transText => {
