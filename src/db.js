@@ -6,7 +6,6 @@ import React, { useState} from 'react';
 
 function DB(props){
    /*.match(/\b(\w+)\b/g) /\n.*\n|\S+/g*/
-     
     return(
    <div className='Database'>
     <form>

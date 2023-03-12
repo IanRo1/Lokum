@@ -46,11 +46,12 @@ function App() {
      const newestArray =[...translateText3.sort(() => Math.random() - 0.5)]
 
      const newestArray2 =[...translateText4.sort(() => Math.random() - 0.5)]
+
      const newArr =[newestArray.map(tText => {
-      return <li>{tText.text}</li>})];
+      return <li id={tText.id}>{tText.text}</li>})][0];
 
    const newArr2=[newestArray2.map(tText2 => {
-    return <li>{tText2.text}</li>})]
+    return <li id={tText2.id}>{tText2.text}</li>})][0];
       
   return (
     <div className="App">
