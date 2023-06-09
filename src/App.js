@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './home';
@@ -43,15 +43,14 @@ function App() {
       return <li id={transText2.id}>
         {transText2.text}</li>
      })
-     const newestArray =[...translateText3.sort(() => Math.random() - 0.5)]
+     
+     const newArr =[translateText3.map(tText => {
+      return <li key={tText.id}id={tText.id}>{tText.text}</li>})][0];
 
-     const newestArray2 =[...translateText4.sort(() => Math.random() - 0.5)]
 
-     const newArr =[newestArray.map(tText => {
-      return <li id={tText.id}>{tText.text}</li>})][0];
-
-   const newArr2=[newestArray2.map(tText2 => {
-    return <li id={tText2.id}>{tText2.text}</li>})][0];
+   const newArr2=[translateText4.map(tText2 => {
+    return <li key={tText2.id}id={tText2.id}>{tText2.text}</li>})][0];
+ 
       
   return (
     <div className="App">
