@@ -58,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
           <Route path='DB' element={<DB trn={translaText1} trn2={translaText2}/>}/>
-          <Route path='/DB/Cards'  element={<Cards newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
+          <Route path='/DB/Cards'  element={<Cards setTranslateText4={setTranslateText4} translateText3={translateText3} setTranslateText3={setTranslateText3}newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
       </Routes>
 </Router>
     </div>
