@@ -8,25 +8,22 @@ function Cards(props){
 
     const newestArray =[props.newArr.sort(() => Math.random() - 0.5)]
      const newestArray2 =[props.newArr2.sort(() => Math.random() - 0.5)]
-        
-      const filterID =  [ID];
-      const filterID2 =  [ID2];
     
     const getID =(e) => {
-        setIDs(e.target.id)
-      console.log(ID)
+        setIDs(+e.target.id)
+      console.log(props.translateText3, ID)
       }
       const getID2 =(e) => {
-        setIDs2(e.target.id)
-        console.log(ID2)
+        setIDs2(+e.target.id)
+        console.log(props.translateText4, ID2)
       }
       
       useEffect(()=>{
-        if(ID && ID2){
-          if(ID === ID2){
-        props.setTranslateText3(filterID.filter(x => x === filterID2));
-        props.setTranslateText4(filterID2.filter(x => x === filterID));
-          }}
+        
+       if(ID === ID2){
+        props.setTranslateText3(props.translateText3.filter((x) => x.id !== ID));
+        props.setTranslateText4(props.translateText4.filter((x) => x.id !== ID2));
+       }
     },[ID,ID2])
    
     return(
