@@ -6,8 +6,8 @@ function Cards(props){
  const [ID, setIDs] = useState([]);
  const [ID2, setIDs2] = useState([]);
 
-    const newestArray =[props.newArr.sort(() => Math.random() - 0.5)]
-     const newestArray2 =[props.newArr2.sort(() => Math.random() - 0.5)]
+    const newestArray =[props.newArr.slice(0,4).sort(() => Math.random() - 0.5)]
+     const newestArray2 =[props.newArr2.slice(0,4).sort(() => Math.random() - 0.5)]
     
     const getID =(e) => {
         setIDs(+e.target.id)
