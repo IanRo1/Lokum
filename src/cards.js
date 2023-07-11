@@ -11,14 +11,19 @@ function Cards(props){
 
      const newtxt=useRef(props.translateText);
      const newtxt2=useRef(props.translateText2);
+
+     const transferTxt=()=>{
+      props.setTranslateText3(newtxt.current)
+      props.setTranslateText4(newtxt2.current)
+     }
     
     const getID =(e) => {
         setIDs(+e.target.id)
-      console.log(newtxt, ID)
+      console.log(props.translateText3, ID)
       }
       const getID2 =(e) => {
         setIDs2(+e.target.id)
-        console.log(newtxt2, ID2)
+        console.log(props.translateText4, ID2)
       }
       
       useEffect(()=>{
@@ -32,16 +37,16 @@ function Cards(props){
 <div className='cards'>
         <div className='cards_container1'>
             <div className='card1' onClick={getID}>{newestArray[0]}</div>
-            <div className='card2'onClick={getID}>{newestArray[1]}</div>
-            <div className='card3'onClick={getID}>{newestArray[2]}</div>
-            <div className='card4'onClick={getID}>{newestArray[3]}</div>
-            
+            <div className='card2' onClick={getID}>{newestArray[1]}</div>
+            <div className='card3' onClick={getID}>{newestArray[2]}</div>
+            <div className='card4' onClick={getID}>{newestArray[3]}</div> 
         </div>
+        <button className='reset' onClick={transferTxt}>reset</button>
         <div className='cards_container2'>
-        <div className='card5'onClick={getID2}>{newestArray2[0]}</div>
-        <div className='card6'onClick={getID2}>{newestArray2[1]}</div>
-        <div className='card7'onClick={getID2}>{newestArray2[2]}</div>
-        <div className='card8'onClick={getID2}>{newestArray2[3]}</div>
+        <div className='card5' onClick={getID2}>{newestArray2[0]}</div>
+        <div className='card6' onClick={getID2}>{newestArray2[1]}</div>
+        <div className='card7' onClick={getID2}>{newestArray2[2]}</div>
+        <div className='card8' onClick={getID2}>{newestArray2[3]}</div>
         </div>
 </div>
     );

@@ -167,7 +167,6 @@ overflow:hidden;
   list-style: none;
   display: flex;
   justify-content: center;
-  column-gap: 3em;
   flex-direction: row;
   
 }
@@ -191,4 +190,21 @@ overflow:hidden;
   width:20rem;
   height:35rem;
   transform:translateY(10vh);
+}
+
+
+
+.reset{
+  width:1rem;
+  height:3rem;
+  border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      width: 6em;
+    font-size: small;
+      min-height: 3em;
+      margin:10px 120px 10px 120px;
+      cursor: pointer;
+      font-size: 16px;
+      transform:translateY(60vh)
 }
