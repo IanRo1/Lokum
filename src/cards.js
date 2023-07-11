@@ -9,8 +9,8 @@ function Cards(props){
     const newestArray =[props.newArr.slice(0,4).sort(() => Math.random() - 0.5)]
      const newestArray2 =[props.newArr2.slice(0,4).sort(() => Math.random() - 0.5)]
 
-     const newtxt=useRef(props.translateText3);
-     const newtxt2=useRef(props.translateText4);
+     const newtxt=useRef(props.translateText);
+     const newtxt2=useRef(props.translateText2);
     
     const getID =(e) => {
         setIDs(+e.target.id)
