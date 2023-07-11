@@ -9,12 +9,11 @@ function Cards(props){
     const newestArray =[props.newArr.slice(0,4).sort(() => Math.random() - 0.5)]
      const newestArray2 =[props.newArr2.slice(0,4).sort(() => Math.random() - 0.5)]
 
-     const newtxt=useRef(props.translateText);
-     const newtxt2=useRef(props.translateText2);
+    
 
      const transferTxt=()=>{
-      props.setTranslateText3(newtxt.current)
-      props.setTranslateText4(newtxt2.current)
+      props.setTranslateText3(props.translateText)
+      props.setTranslateText4(props.translateText2)
      }
     
     const getID =(e) => {
