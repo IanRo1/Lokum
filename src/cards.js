@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 
 
 function Cards(props){  
@@ -8,18 +8,20 @@ function Cards(props){
 
     const newestArray =[props.newArr.slice(0,4).sort(() => Math.random() - 0.5)]
      const newestArray2 =[props.newArr2.slice(0,4).sort(() => Math.random() - 0.5)]
+
+     const newtxt=useRef(props.translateText3);
+     const newtxt2=useRef(props.translateText4);
     
     const getID =(e) => {
         setIDs(+e.target.id)
-      console.log(props.translateText3, ID)
+      console.log(newtxt, ID)
       }
       const getID2 =(e) => {
         setIDs2(+e.target.id)
-        console.log(props.translateText4, ID2)
+        console.log(newtxt2, ID2)
       }
       
       useEffect(()=>{
-        
        if(ID === ID2){
         props.setTranslateText3(props.translateText3.filter((x) => x.id !== ID));
         props.setTranslateText4(props.translateText4.filter((x) => x.id !== ID2));
