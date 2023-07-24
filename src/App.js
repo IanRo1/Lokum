@@ -45,11 +45,11 @@ function App() {
      })
      
      const newArr =[translateText3.map(tText => {
-      return <li key={tText.id}id={tText.id}>{tText.text}</li>})][0];
+      return <li className='cli' key={tText.id}id={tText.id}>{tText.text}</li>})][0];
 
 
    const newArr2=[translateText4.map(tText2 => {
-    return <li key={tText2.id}id={tText2.id}>{tText2.text}</li>})][0];
+    return <li className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</li>})][0];
  
       
   return (

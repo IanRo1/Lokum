@@ -176,7 +176,7 @@ overflow:hidden;
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  text-align: center;
+  text-align:center;
   width:20rem;
   height:35rem;
   transform: translateY(10vh);
@@ -192,6 +192,19 @@ overflow:hidden;
   transform:translateY(10vh);
 }
 
+.cli{
+  border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+      width: 6em;
+      height:3em;
+    font-size: small;
+      min-height: 3em;
+      margin:10px 120px 10px 120px;
+      cursor: pointer;
+      font-size: 16px;
+      padding:.8em;
+}
 
 
 .reset{
