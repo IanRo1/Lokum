@@ -24,15 +24,15 @@ function App() {
   const preventD1 = (e) =>{
     e.preventDefault();
     setNum(num+1);
-    setTranslateText([...translateText,{text: inputText,id:num}])
+    setTranslateText([...translateText,{text: inputText,key:num,id:num}])
     setInputText("");
-    setTranslateText3([...translateText3,{text: inputText, completed:false, id:num }])
+    setTranslateText3([...translateText3,{text: inputText,key:num,id:num }])
   }
   const preventD2 = (e) =>{
     e.preventDefault();
-    setTranslateText2([...translateText2,{text: inputText2,id: num2}])
+    setTranslateText2([...translateText2,{text: inputText2,key:num2,id: num2}])
     setInputText2("");
-    setTranslateText4([...translateText4,{text: inputText2, completed:false, id: num2 }])
+    setTranslateText4([...translateText4,{text: inputText2,key:num2,id: num2 }])
     setNum2(num2+1);
   }
 
@@ -45,11 +45,11 @@ function App() {
      })
      
      const newArr =[translateText3.map(tText => {
-      return <li className='cli' key={tText.id}id={tText.id}>{tText.text}</li>})][0];
+      return <button className='cli' key={tText.id}id={tText.id}>{tText.text}</button>})][0];
 
 
-   const newArr2=[translateText4.map(tText2 => {
-    return <li className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</li>})][0];
+      const newArr2=[translateText4.map(tText2 => {
+        return <button className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</button>})][0];
  
       
   return (

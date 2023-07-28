@@ -1,10 +1,10 @@
 import './App.css';
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function Cards(props){  
- const [ID, setIDs] = useState([]);
- const [ID2, setIDs2] = useState([]);
+ const [ID, setIDs] = useState(null);
+ const [ID2, setIDs2] = useState(null);
 
     const newestArray =[props.newArr.slice(0,4).sort(() => Math.random() - 0.5)]
      const newestArray2 =[props.newArr2.slice(0,4).sort(() => Math.random() - 0.5)]
@@ -14,15 +14,15 @@ function Cards(props){
      const transferTxt=()=>{
       props.setTranslateText3(props.translateText)
       props.setTranslateText4(props.translateText2)
+      setIDs(null);
+      setIDs2(null);
      }
     
     const getID =(e) => {
         setIDs(+e.target.id)
-      console.log(props.translateText3, ID)
       }
       const getID2 =(e) => {
         setIDs2(+e.target.id)
-        console.log(props.translateText4, ID2)
       }
       
       useEffect(()=>{
