@@ -35,13 +35,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width:53em;
   }
   .home2{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .crtTxt{
+    font-size: 1.3em;
   }
   
   .translate{
@@ -50,17 +52,21 @@
     align-items: center;
     flex-direction: column;
     width: 70vh;
-    height: 30vh;
+    height: 7vh;
     resize:none;
-    margin:2em;
-    outline:none;
+    margin:7em;
+    outline:transparent;
+    border: transparent;
+    border-radius: 5em;
+    font-size: large;
+    text-align: center;
   }
    
   .btns{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(3vh);
+    transform: translateY(-5em);
   }
   .btn1:hover{
     background-color: white;
@@ -91,7 +97,7 @@
     border: 2px solid #ffffff;
       background: transparent;
       color: #ffffff;
-      width: 6em;
+      width: 7em;
     font-size: small;
       min-height: 3em;
       margin:10px 120px 10px 120px;
@@ -104,7 +110,7 @@
   justify-content:baseline;
   align-items:baseline;
   flex-direction: column;
-  transform: translateY(10vh);
+  transform: translateY(0.5em);
 }
 .btn3{
   border: 2px solid #ffffff;

@@ -17,18 +17,18 @@ function Home(props) {
      <div className="Home">
        <header>Lokum</header>
      <form>
-      <p>Character Count = {char.length}/720</p>
+      <p className='crtTxt'>Character Count = {char.length}/720</p>
       <div className='home1'>
         <div className='home2'>
-     <textarea maxLength="720" value= {props.inputText} onChange={charTxt} className="translate" name="translate" rows="4" cols="50">
-       </textarea>
+     <input type="text" value= {props.inputText} onChange={charTxt} className="translate" name="translate" minlength="4" maxlength="10">
+       </input>
        <div className='btns'>
        <button onClick={props.preventD1} className='btn1'> Save Text</button>
        </div>
        </div>
        <div className='home3'>
-       <textarea maxLength="720" value= {props.inputText2} onChange={charTxt2} className="translate" name="translate" rows="4" cols="50">
-       </textarea>
+       <input maxLength="720" value= {props.inputText2} onChange={charTxt2} className="translate" name="translate" rows="4" cols="50">
+       </input>
        <div className='btns'>
        <button onClick={props.preventD2} className='btn2'> Save Text</button>
        </div>
