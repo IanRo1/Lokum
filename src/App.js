@@ -45,11 +45,11 @@ function App() {
      })
      
      const newArr =[translateText3.map(tText => {
-      return <button className='cli' key={tText.id}id={tText.id}>{tText.text}</button>})][0];
+      return <button className='cli' key={tText.id}id={tText.id}>{tText.text}</button>}).sort(() => Math.random() - 0.5)][0];
 
 
       const newArr2=[translateText4.map(tText2 => {
-        return <button className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</button>})][0];
+        return <button className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</button>}).sort(() => Math.random() - 0.5)][0];
  
       
   return (
