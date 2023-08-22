@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 function Home(props) {
   const [char,setChar] = useState('');
 
+   /*Saving Values in Input Field into State, to Be Transferred To inputTextHandler for Use in App.js
+   Also, for Character Counter(Char/Length)*/
   const charTxt=(e)=>{
     props.inputTextHandler(e);
   setChar(e.target.value);
@@ -13,6 +15,7 @@ function Home(props) {
     props.inputTextHandler2(e);
   setChar(e.target.value);
   }
+
    return (
      <div className="Home">
        <header>Lokum</header>
@@ -20,14 +23,14 @@ function Home(props) {
       <p className='crtTxt'>Character Count = {char.length}/40</p>
       <div className='home1'>
         <div className='home2'>
-     <input type="text" value= {props.inputText} onChange={charTxt} className="translate" name="translate" minlength="4" maxlength="40">
+     <input type="text" maxlength="40" autoComplete='off' value= {props.inputText} onChange={charTxt} className="translate" name="translate" minlength="4">
        </input>
        <div className='btns'>
        <button onClick={props.preventD1} className='btn1'> Save Text</button>
        </div>
        </div>
        <div className='home3'>
-       <input maxLength="40" value= {props.inputText2} onChange={charTxt2} className="translate" name="translate" rows="4" cols="50">
+       <input maxLength="40" autoComplete='off' value= {props.inputText2} onChange={charTxt2} className="translate" name="translate" rows="4" cols="50">
        </input>
        <div className='btns'>
        <button onClick={props.preventD2} className='btn2'> Save Text</button>

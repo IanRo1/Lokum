@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Session from './session';
 import Home from './home';
 import DB from './db';
 import Cards from './cards';
@@ -14,13 +15,20 @@ function App() {
   const [translateText4, setTranslateText4] = useState([]);
   const [num,setNum]=useState(0);
   const [num2,setNum2]=useState(0);
-  
+  const [profile, setProfiles] = useState([]);
+  const [profile2, setProfiles2] = useState([]);
+
+   /*Transferring Input Text from Home.JS Input Field*/
+
   const inputTextHandler =(e) => {
     setInputText(e.target.value);
   }
   const inputTextHandler2 =(e) => {
     setInputText2(e.target.value);
   }
+   /*Using Typed Input Text from home.js to Build Values in State with Matching IDs;
+   Also Setting Input Text to Blank After Each Save*/
+
   const preventD1 = (e) =>{
     e.preventDefault();
     setNum(num+1);
@@ -35,6 +43,9 @@ function App() {
     setTranslateText4([...translateText4,{text: inputText2,key:num2,id: num2 }])
     setNum2(num2+1);
   }
+   /*Mapping Through Typed Input Values in State in Order to Build New Array with Accessible Values/IDs
+    Needs to be Done Twice for Each Set of Values; One Set For Display That Can't Be Modified Through Comparison(translaText1&&2),
+    And One Set That Can Be For Memorization Game(translaText3&&4)(Modified Later in cards.js Through Filter After ID Comparison)*/
 
   const translaText1 = translateText.map(transText => {
      return <li id={transText.id}>{transText.text}</li>
@@ -43,6 +54,8 @@ function App() {
       return <li id={transText2.id}>
         {transText2.text}</li>
      })
+     /*Mapping Second Set of Typed Values for Comparison, but Only Displaying Last Typed Values[0], Otherwise All Values 
+     Will Be Displayed*/
      
      const newArr =[translateText3.map(tText => {
       return <button className='cli' key={tText.id}id={tText.id}>{tText.text}</button>})][0];
@@ -50,6 +63,8 @@ function App() {
 
       const newArr2=[translateText4.map(tText2 => {
         return <button className='cli' key={tText2.id}id={tText2.id}>{tText2.text}</button>})][0];
+
+         /*Slicing/Randomizing 2nd Mapped Array So That Only 4 Matching Values Appear at a Time in Random Order*/
 
         const newestArray =[newArr.slice(0,4).sort(() => Math.random() - 0.5)];
         const newestArray2 =[newArr2.slice(0,4).sort(() => Math.random() - 0.5)];
@@ -59,9 +74,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
-          <Route path='DB' element={<DB trn={translaText1} trn2={translaText2}/>}/>
-          <Route path='/DB/Cards'  element={<Cards newestArray2={newestArray2} newestArray={newestArray}setTranslateText2={setTranslateText2} translateText2={translateText2}setTranslateText={setTranslateText}translateText={translateText} setTranslateText4={setTranslateText4} translateText4={translateText4}translateText3={translateText3} setTranslateText3={setTranslateText3}newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
+        <Route path='/' element={<Session />}/>
+          <Route path="home" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
+          <Route path='home/DB' element={<DB setProfiles={setProfiles} setProfiles2={setProfiles2} trn={translaText1} trn2={translaText2}/>}/>
+          <Route path='home/DB/Cards'  element={<Cards newestArray2={newestArray2} newestArray={newestArray}setTranslateText2={setTranslateText2} translateText2={translateText2}setTranslateText={setTranslateText}translateText={translateText} setTranslateText4={setTranslateText4} translateText4={translateText4}translateText3={translateText3} setTranslateText3={setTranslateText3}newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
       </Routes>
 </Router>
     </div>

@@ -5,7 +5,16 @@ import React from 'react';
 
 
 function DB(props){
-   /*.match(/\b(\w+)\b/g) /\n.*\n|\S+/g*/
+/*
+  <div>
+  <button className="dbBtn" onClick={saveSession}>Save Your Word List!</button>
+  </div>
+    const saveSession = ()=>{
+      props.setProfiles(props.trn);
+      props.setProfiles2(props.trn2)
+    
+
+   /*Bringing Display Input Values From App.JS*/
     return(
    <div className='Database'>
     <form>

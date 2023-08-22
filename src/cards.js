@@ -3,9 +3,14 @@ import React, { useState, useEffect } from 'react';
 
 
 function Cards(props){  
+
+/*Establishing State to Save IDs for Comparison*/
+
  const [ID, setIDs] = useState(null);
  const [ID2, setIDs2] = useState(null);
 
+ /*Function to Transfer Display Values(TranslateText1 && 2) from App.JS To The Active Values(TranslateText3 && 4),
+ Sets IDs Back to Null, Otherwise Comparison If() Function Below in UseEffect Won't Work Properly*/
 
      const transferTxt=()=>{
       props.setTranslateText3(props.translateText)
@@ -14,13 +19,17 @@ function Cards(props){
       setIDs2(null);
      }
     
+/*Functions to Save IDs to State as Numbers*/
+
     const getID =(e) => {
         setIDs(+e.target.id)
       }
       const getID2 =(e) => {
         setIDs2(+e.target.id) 
       }
-      
+      /*UseEffect to Constantly Check If Clicked IDs in State Match IDs of Active Values(TransferText 3&4); 
+      If So, They Are Reduced*/
+
       useEffect(()=>{
        if(ID === ID2){
         props.setTranslateText3(props.translateText3.filter((x) => x.id !== ID));
