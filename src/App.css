@@ -43,21 +43,40 @@
     font-size: large;
     color:white;
   }
+  .sessContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
   .newSess{
     font-size:medium;
     color:white;
   }
+  .sessIcon{
+    margin:1em;
+    font-size: larger;
+    border: 2px solid #ffffff;
+    color:white;
+    padding:.08em;
+    width:3em;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sessIcon:hover{
+    background-color: white;
+    color: #2598ce;
+  }
   .homeBtn{
-   min-height:2em;
-   min-width:5em;
+   min-height:1em;
+   min-width:3em;
    border: 2px solid #ffffff;
       background: transparent;
       color: #ffffff;
     font-size: small;
-      min-height: 3.5em;
-      min-width: 7.5em;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 15px;
       padding:.8em;
       overflow:hidden;
   }

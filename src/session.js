@@ -9,7 +9,10 @@ function Session(){
   return (
     <div className='profile'>
         <p className='profName'>'s Profile</p>
+        <div className='sessContainer'>
         <p className='newSess'>Click to Start a New Session</p>
+        <div className="sessIcon">+</div>
+        </div>
         <div className='profileCont'></div>
         <Link to='home'>
       <button className="homeBtn">Test Your Memory!</button>
