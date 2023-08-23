@@ -58,6 +58,7 @@
     margin:1em;
     font-size: larger;
     border: 2px solid #ffffff;
+    background: transparent;
     color:white;
     padding:.08em;
     width:3em;
@@ -68,6 +69,40 @@
     background-color: white;
     color: #2598ce;
   }
+  .secretTxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hiddName{
+    height:2em;
+    width:5em;
+    text-align: end;
+    background: transparent;
+    outline: none;
+    border:none;
+    overflow: hidden;
+   
+    
+  }
+
+  .submitBtn{
+    min-height:.5em;
+    min-width:3em;
+    border: 2px solid #ffffff;
+       background: transparent;
+       color: #ffffff;
+     font-size:x-small;
+       cursor: pointer;
+       overflow:hidden;
+       padding:.2em;
+       transform: translateX(-9em);
+  }
+  .submitBtn:hover{
+    background-color: white;
+    color: #2598ce;
+  }
+  
   .homeBtn{
    min-height:1em;
    min-width:3em;
