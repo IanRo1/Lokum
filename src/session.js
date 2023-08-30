@@ -3,29 +3,38 @@ import './App.css';
 import {Link} from 'react-router-dom';
 
 function Session(){
+  /*<p className='newSess'>Click to Start a New Session</p>
+        <button className="sessIcon" >+</button>*/
   const [sessionName, setSessionName] = useState("");
-  const [hiddName, sethiddName] = useState([]);
-  const [hiddButton, sethiddButton] = useState([]);
+  const [sessionName1, setSessionName1] = useState([]);
+  const [ids,setIds]=useState(0);
 
-  const createName=()=>{
-    sethiddName(<input className='hiddName' type="text" id='0'></input>)
-    sethiddButton(<button className='submitBtn' id='0' onClick={deleteName}>Submit</button>)
+  const getTxt =(e)=>{
+    setSessionName(e.target.value);
+    console.log(e.target.value)
+   }
+   
+  const deleteName=(e)=>{
+    e.preventDefault();
+    setIds(ids+1)
+    setSessionName1([...sessionName1,{text:sessionName,key: ids}]);
+    setSessionName("");
+    console.log(sessionName)
   }
-
-  const deleteName=()=>{
-    sethiddName(hiddName.filter((x) => x.id === '0'))
-    sethiddButton(hiddButton.filter((x) =>x.id === '0'))
-  }
+  const sessionNames =[sessionName1.map(ssnName => {
+    return <div key={ssnName.key}>{ssnName.text}</div>})][0];
 
   return (
     <div className='profile'>
         <p className='profName'>'s Profile</p>
-        <div className='sessContainer'>
         <p className='newSess'>Click to Start a New Session</p>
-        <button className="sessIcon" onClick={createName}>+</button>
-        <div className='secretTxt'>{hiddName}{hiddButton}</div>
+        <div className='sessContainer'>
+        <div className='sessDiv'>
+        <input className='hiddName' name="hiddName" type="text" value={sessionName}onChange={getTxt}></input>
+        <button className='submitBtn' onClick={deleteName}>Submit</button>
         </div>
-        <div className='profileCont'></div>
+        </div>
+        <div className='profileCont'>{sessionNames}</div>
         <Link to='home'>
       <button className="homeBtn">Test Your Memory!</button>
       </Link>
