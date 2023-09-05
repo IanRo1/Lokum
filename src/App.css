@@ -88,6 +88,13 @@
     background: transparent;
   }
 
+  .profileCont{
+    display: flex;
+    
+  }
+  .ssnTxt{
+     margin: 1em;
+  }
   .submitBtn{
     min-height:.5em;
     min-width:3em;

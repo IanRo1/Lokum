@@ -22,7 +22,7 @@ function Session(){
     console.log(sessionName)
   }
   const sessionNames =[sessionName1.map(ssnName => {
-    return <div key={ssnName.key}>{ssnName.text}</div>})][0];
+    return <div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div>})][0];
 
   return (
     <div className='profile'>
@@ -33,8 +33,8 @@ function Session(){
         <input className='hiddName' name="hiddName" type="text" value={sessionName}onChange={getTxt}></input>
         <button className='submitBtn' onClick={deleteName}>Submit</button>
         </div>
+         <div className='profileCont'>{sessionNames}</div>
         </div>
-        <div className='profileCont'>{sessionNames}</div>
         <Link to='home'>
       <button className="homeBtn">Test Your Memory!</button>
       </Link>
