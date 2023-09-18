@@ -8,6 +8,8 @@ function Session(){
   const [sessionName, setSessionName] = useState("");
   const [sessionName1, setSessionName1] = useState([]);
   const [ids,setIds]=useState(0);
+  const [active, setActive] = useState(false);
+  const [icon, setIcon] = useState(true);
 
   const getTxt =(e)=>{
     setSessionName(e.target.value);
@@ -21,6 +23,10 @@ function Session(){
     setSessionName("");
     console.log(sessionName)
   }
+  const toggIcon=(e)=>{
+    setActive(!active);
+    setIcon(!icon);
+  }
   const sessionNames =[sessionName1.map(ssnName => {
     return <div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div>})][0];
 
@@ -29,12 +35,17 @@ function Session(){
         <p className='profName'>'s Profile</p>
         <p className='newSess'>Click to Start a New Session</p>
         <div className='sessContainer'>
-        <div className='sessDiv'>
+        <div className='sessDiv' onClick={toggIcon}>{ setIcon ? "+" : "" }</div>
+          {active?(
+          <>
+          <div className='sessDiv2'>
         <input className='hiddName' name="hiddName" type="text" value={sessionName}onChange={getTxt}></input>
         <button className='submitBtn' onClick={deleteName}>Submit</button>
         </div>
-         <div className='profileCont'>{sessionNames}</div>
+        </>
+        ):("")}
         </div>
+         <div className='profileCont'>{sessionNames}</div>
         <Link to='home'>
       <button className="homeBtn">Test Your Memory!</button>
       </Link>
