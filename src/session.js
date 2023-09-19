@@ -9,7 +9,7 @@ function Session(){
   const [sessionName1, setSessionName1] = useState([]);
   const [ids,setIds]=useState(0);
   const [active, setActive] = useState(false);
-  const [icon, setIcon] = useState(true);
+  const [icon, setIcon] = useState("+");
 
   const getTxt =(e)=>{
     setSessionName(e.target.value);
@@ -21,11 +21,14 @@ function Session(){
     setIds(ids+1)
     setSessionName1([...sessionName1,{text:sessionName,key: ids}]);
     setSessionName("");
+    setIcon("+")
+    setActive(!active)
     console.log(sessionName)
   }
-  const toggIcon=(e)=>{
+  const toggIcon=()=>{
     setActive(!active);
     setIcon(!icon);
+    console.log(icon)
   }
   const sessionNames =[sessionName1.map(ssnName => {
     return <div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div>})][0];
@@ -35,7 +38,7 @@ function Session(){
         <p className='profName'>'s Profile</p>
         <p className='newSess'>Click to Start a New Session</p>
         <div className='sessContainer'>
-        <div className='sessDiv' onClick={toggIcon}>{ setIcon ? "+" : "" }</div>
+        <div className='sessDiv' onClick={toggIcon}>{icon}</div>
           {active?(
           <>
           <div className='sessDiv2'>
