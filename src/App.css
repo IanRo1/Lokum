@@ -40,19 +40,22 @@
   }
 
   .profName{
-    font-size: large;
-    color:white;
+   
+    font-size: 1.5em;
+    color: #ffffff;
   }
   .sessContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    height:9vh;
     
   }
   .newSess{
-    font-size:medium;
+    font-size:1.2em;
     color:white;
+
   }
   .sessIcon{
     margin:1em;
@@ -76,21 +79,26 @@
   }
   .sessDiv{
     flex-direction: row;
-
+    height:9vh;
   }
-
+  .sessDiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hiddName{
-    height:2em;
-    width:5em;
-    text-align: end;
+    height:2.2em;
+    width:10em;
+    text-align:center;
     outline: none;
-    border:none;
+    border: 2px solid #ffffff;
     overflow: hidden;
     background: transparent;
+    transform: translateX(-1em);
   }
   .submitBtn{
-    min-height:.5em;
-    min-width:3em;
+    min-height:3em;
+    min-width:6em;
     border: 2px solid #ffffff;
        background: transparent;
        color: #ffffff;
@@ -98,16 +106,34 @@
        cursor: pointer;
        overflow:hidden;
        padding:.2em;
-       transform: translateX(-9em);
+       transform: translateX(-10.5em);
   }
   .profileCont{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height:1vh;
+    text-align:start;
     
   }
   .ssnTxt{
      margin: 1em;
   }
-
+.addBtn{
+  min-height:3em;
+    min-width:7em;
+    border: 2px solid #ffffff;
+       background: transparent;
+       color: #ffffff;
+     font-size:small;
+       cursor: pointer;
+       overflow:hidden;
+    
+}
+.addBtn:hover{
+  background-color: white;
+  color: #2598ce;
+}
   .submitBtn:hover{
     background-color: white;
     color: #2598ce;
@@ -124,6 +150,7 @@
       font-size: 15px;
       padding:.8em;
       overflow:hidden;
+      
   }
   .homeBtn:hover{
     background-color: white;

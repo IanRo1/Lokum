@@ -9,7 +9,7 @@ function Session(){
   const [sessionName1, setSessionName1] = useState([]);
   const [ids,setIds]=useState(0);
   const [active, setActive] = useState(false);
-  const [icon, setIcon] = useState("+");
+  const [icon, setIcon] = useState(<button className='addBtn'>New Session</button>);
 
   const getTxt =(e)=>{
     setSessionName(e.target.value);
@@ -21,7 +21,7 @@ function Session(){
     setIds(ids+1)
     setSessionName1([...sessionName1,{text:sessionName,key: ids}]);
     setSessionName("");
-    setIcon("+")
+    setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
     console.log(sessionName)
   }
