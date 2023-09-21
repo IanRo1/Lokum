@@ -112,12 +112,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     height:1vh;
     text-align:start;
     
   }
   .ssnTxt{
      margin: 1em;
+     border: 2px solid #ffffff;
+     color:white;
+     cursor:pointer;
+     display: flex;
+     font-size: large;
+     justify-content: center;
+     align-items: center;
+     text-align:center;
+     min-height:5em;
+     min-width:6em;
+     padding:.5em;
   }
 .addBtn{
   min-height:3em;

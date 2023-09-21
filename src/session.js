@@ -2,36 +2,33 @@ import React, { useState} from 'react';
 import './App.css';
 import {Link} from 'react-router-dom';
 
-function Session(){
+function Session(props){
   /*<p className='newSess'>Click to Start a New Session</p>
         <button className="sessIcon" >+</button>*/
-  const [sessionName, setSessionName] = useState("");
-  const [sessionName1, setSessionName1] = useState([]);
   const [ids,setIds]=useState(0);
   const [active, setActive] = useState(false);
   const [icon, setIcon] = useState(<button className='addBtn'>New Session</button>);
 
   const getTxt =(e)=>{
-    setSessionName(e.target.value);
+    props.setSessionName(e.target.value);
     console.log(e.target.value)
    }
    
   const deleteName=(e)=>{
     e.preventDefault();
     setIds(ids+1)
-    setSessionName1([...sessionName1,{text:sessionName,key: ids}]);
-    setSessionName("");
+    props.setSessionName1([...props.sessionName1,{text:props.sessionName,key: ids}]);
+    props.setSessionName("");
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
-    console.log(sessionName)
+    
   }
   const toggIcon=()=>{
     setActive(!active);
     setIcon(!icon);
-    console.log(icon)
   }
-  const sessionNames =[sessionName1.map(ssnName => {
-    return <div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div>})][0];
+  const sessionNames =[props.sessionName1.map(ssnName => {
+    return <Link to='home'><div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div></Link>})][0];
 
   return (
     <div className='profile'>
@@ -42,16 +39,13 @@ function Session(){
           {active?(
           <>
           <div className='sessDiv2'>
-        <input className='hiddName' name="hiddName" type="text" value={sessionName}onChange={getTxt}></input>
+        <input className='hiddName' name="hiddName" type="text" value={props.sessionName}onChange={getTxt}></input>
         <button className='submitBtn' onClick={deleteName}>Submit</button>
         </div>
         </>
         ):("")}
         </div>
          <div className='profileCont'>{sessionNames}</div>
-        <Link to='home'>
-      <button className="homeBtn">Test Your Memory!</button>
-      </Link>
     </div>
   )
 }
