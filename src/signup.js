@@ -7,8 +7,16 @@ function SignUp(){
         return(
        <div className='signUp'>
         <form>
-        <input type="text" className='userName' name='userName'></input>
-         <input type="text" className='Email' name='userName'></input>
+        <div className='signupForm'>
+          <div className='formDiv3'>
+          <label className='label'>Name:</label>
+         <input type="text" className='enterData' name='userName'></input>
+         </div>
+         <div className='formDiv4'>
+         <label className='label'>E-Mail:</label>
+         <input type="text" className='enterData' name='userName'></input>
+         </div>
+         </div>
         </form>
        </div>
         );
