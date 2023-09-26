@@ -23,7 +23,7 @@ function Home(props) {
       <p className='crtTxt'>Character Count = {char.length}/40</p>
       <div className='home1'>
         <div className='home2'>
-     <input type="text" maxlength="40" autoComplete='off' value= {props.inputText} onChange={charTxt} className="translate" name="translate" minlength="4">
+     <input type="text" maxlength="40" autoComplete='off' value= {props.inputText} onChange={charTxt} className="translate" name="translate" minLength="4">
        </input>
        <div className='btns'>
        <button onClick={props.preventD1} className='btn1'> Save Text</button>
