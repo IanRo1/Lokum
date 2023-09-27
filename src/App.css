@@ -36,11 +36,11 @@
   background: transparent;
   color: #ffffff;
   width: 8em;
-font-size:x-small;
+font-size:.8em;
   min-height: 3em;
   margin:10px 120px 10px 120px;
   cursor: pointer;
-  font-size: 16px;
+  
   }
   button:hover{
     background-color: white;
@@ -52,14 +52,15 @@ font-size:x-small;
   }
   .signForm{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:start;
     align-items:center;
-    flex-direction:row;
-  background: transparent;
+    flex-direction:column;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
   color: #ffffff;
-  border: 2px solid #ffffff;
-  height:25em;
-  width:55em;
+  border:#ffffff solid;
+  height:19em;
+  width:30em;
+  
   }
   
   .signinText{
@@ -74,11 +75,16 @@ font-size:x-small;
     justify-content: center;
     align-items: center;
    flex-direction:column;
-   margin:-5em;
+   margin:-4em;
+   padding:3px;
+  }
+  .signBtn{
+    margin:1em;
   }
   .signBtns{
     margin:1em;
   }
+  
   .signupForm{
     display: flex;
     justify-content: center;

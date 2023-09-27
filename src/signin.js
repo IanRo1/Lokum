@@ -17,11 +17,11 @@ function SignIn(){
          <label className='label'>E-Mail:</label>
          <input type="text" className='enterData' name='userName'></input>
          </div>
-         </div>
-         <div className='signBtns'>
          <Link to='Signup'>
          <button className='signBtn'>Sign Up!</button>
          </Link>
+         </div>
+         <div className='signBtns'>
          <Link to='Session'>
          <button className='guestBtn'>Continue As Guest</button>
          </Link>
