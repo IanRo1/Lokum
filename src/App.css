@@ -36,7 +36,7 @@
   background: transparent;
   color: #ffffff;
   width: 8em;
-font-size:.8em;
+font-size:16px;
   min-height: 3em;
   margin:10px 120px 10px 120px;
   cursor: pointer;
@@ -50,19 +50,27 @@ font-size:.8em;
     background: transparent;
       color: #ffffff;
   }
-  .signForm{
+  .signForm,.signForm2{
     display: flex;
     justify-content:start;
     align-items:center;
     flex-direction:column;
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
-  color: #ffffff;
-  border:#ffffff solid;
-  height:19em;
+  height:23em;
   width:30em;
-  
   }
   
+  .formDiv3,.formDiv4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction:column;
+   margin:-3em;
+   padding:3px;
+  }
+  .enterData{
+    outline: none;
+    background: transparent;
+  }
   .signinText{
     font-size: large;
   }
@@ -75,7 +83,7 @@ font-size:.8em;
     justify-content: center;
     align-items: center;
    flex-direction:column;
-   margin:-4em;
+   margin:-3.5em;
    padding:3px;
   }
   .signBtn{

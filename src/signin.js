@@ -1,29 +1,29 @@
 import './App.css';
-import React from 'react';
 import {Link} from 'react-router-dom';
+import React, { useState} from 'react';
 
-function SignIn(){
+function SignIn(props){
+  
+  const [names2, setNames2] = useState(props.names);
+  const getTxt1 =(e)=>{
+    e.preventDefault();
+    props.setNames(e.target.value);
+   }
+   
+   const clrTxt=()=>{
+    setNames2("");
+   }
    
         return(
        <div className='Sign-In'>
-        <header className='signinText'>Please Login, SignUp for An Account, or Continue as a Guest</header>
+        <header className='signinText'>Hi! Welcome to Lokum! What's your name?</header>
         <form>
         <div className='signForm'>
           <div className='formDiv'>
-          <label className='label'>Log-In:</label>
-         <input type="text" className='enterData' name='userName'></input>
+         <input type="text" className='enterData' name='userName' value={props.names2} onChange={getTxt1}></input>
          </div>
-         <div className='formDiv2'>
-         <label className='label'>E-Mail:</label>
-         <input type="text" className='enterData' name='userName'></input>
-         </div>
-         <Link to='Signup'>
-         <button className='signBtn'>Sign Up!</button>
-         </Link>
-         </div>
-         <div className='signBtns'>
          <Link to='Session'>
-         <button className='guestBtn'>Continue As Guest</button>
+         <button className='signBtn' onClick={clrTxt}>Select Your Name</button>
          </Link>
          </div>
         </form>

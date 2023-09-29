@@ -21,7 +21,6 @@ function Session(props){
     props.setSessionName("");
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
-    
   }
   const toggIcon=()=>{
     setActive(!active);
@@ -32,8 +31,8 @@ function Session(props){
 
   return (
     <div className='profile'>
-        <p className='profName'>'s Profile</p>
-        <p className='newSess'>Click to Start a New Session</p>
+        <p className='profName'>{props.names}'s Profile</p>
+        <p className='newSess'>Click to Start and Name a New Session.</p>
         <div className='sessContainer'>
         <div className='sessDiv' onClick={toggIcon}>{icon}</div>
           {active?(
