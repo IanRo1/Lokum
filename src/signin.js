@@ -2,7 +2,11 @@ import './App.css';
 import {Link} from 'react-router-dom';
 import React, { useState} from 'react';
 
+
+
+
 function SignIn(props){
+   /*SignIn Portion*/
   
   const [names2, setNames2] = useState(props.names);
   const getTxt1 =(e)=>{
@@ -13,6 +17,7 @@ function SignIn(props){
    const clrTxt=()=>{
     setNames2("");
    }
+
    
         return(
        <div className='Sign-In'>

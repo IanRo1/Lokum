@@ -27,7 +27,7 @@ function Session(props){
     setIcon(!icon);
   }
   const sessionNames =[props.sessionName1.map(ssnName => {
-    return <Link to='home'><div key={ssnName.key}><p className='ssnTxt'>{ssnName.text}</p></div></Link>})][0];
+    return <div key={ssnName.key} className='ssnTxt'>{ssnName.text}</div>})][0];
 
   return (
     <div className='profile'>
@@ -44,7 +44,7 @@ function Session(props){
         </>
         ):("")}
         </div>
-         <div className='profileCont'>{sessionNames}</div>
+        <Link to='home'><div className='profileCont'>{sessionNames}</div></Link>
     </div>
   )
 }

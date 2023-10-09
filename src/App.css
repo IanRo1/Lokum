@@ -58,7 +58,7 @@ font-size:16px;
   height:23em;
   width:30em;
   }
-  
+
   .formDiv3,.formDiv4{
     display: flex;
     justify-content: center;
@@ -223,6 +223,12 @@ font-size:16px;
     background-color: white;
     color: #2598ce;
   }
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .home1{
     display: flex;
     justify-content: center;
@@ -236,6 +242,9 @@ font-size:16px;
     flex-direction: column;
   }
   .crtTxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.2em;
     color: #ffffff;
   }
@@ -245,8 +254,8 @@ font-size:16px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 23em;
-    height: 2.5em;
+    max-width: 23em;
+    max-height: 2.5em;
     resize:none;
     margin:7em;
     outline:gray;
@@ -366,13 +375,36 @@ color: #2598ce;
   height:1.5rem;
   transform: translate(-40em,41rem);
 }
+@media(max-width:600px){
+  
+  .cards{
+    flex-wrap: wrap;
+    height:100vh;
 
+  }
+  .cards_container1{
+    margin-bottom: 10px;
+    margin-left:10em;
+    width:10rem;
+    height:5rem;
+
+  }
+  .cards_container2{
+    margin-right:10em;
+    width:10rem;
+    height:5rem;
+    position: absolute;
+    
+  }
+  .reset{
+    position: absolute;
+  }
+}
 .cards{
   list-style: none;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  
 }
 
 .cards_container1{
@@ -407,6 +439,20 @@ color: #2598ce;
       cursor: pointer;
       font-size: 16px;
       padding:.8em;}
+    
+      .cli:hover{
+        background-color: white;
+        color: #2598ce;
+      }
+      .cli:focus{
+        background-color: white;
+      color: #2598ce;
+      
+      }
+      .cli:active{
+         background-color: white;
+      color: #2598ce;
+      }
 
 .reset{
   height:3rem;
@@ -414,5 +460,13 @@ color: #2598ce;
       min-height: 3em;
       min-width: 5em;
       cursor: pointer;
-      transform:translateY(60vh)
+      transform:translateY(72vh)
+}
+.reset:hover{
+  background-color: white;
+color: #2598ce;
+}
+.reset:active{
+  background: transparent;
+    color: #ffffff;
 }
