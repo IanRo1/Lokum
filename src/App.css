@@ -317,7 +317,7 @@ overflow:hidden;
 }
 .column_one{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   border:solid white;
   min-width:20rem;
@@ -377,19 +377,49 @@ color: #2598ce;
   transform: translate(-40em,41rem);
 }
 
-@media(max-width:600px){
-  
-  .cards{
+@media(max-width:900px){
+  .db_Container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+  }
+  ol{
+    display: flex;
+    flex-direction: column;
+    column-count: 3;
+    flex-wrap: wrap;
+  }
+  .column_one{
+    flex-direction: column;
+    flex-flow: column wrap;
+    flex-wrap: wrap;
+    column-count: 3;
+     min-width:20rem;
+     min-height:10rem;
+     margin-bottom: 5rem;
+     justify-content: left;
+     align-items: flex-start;
+     padding-left:1.5rem ;
+  }
+  .column_two{
+    flex-direction: column;
+    min-width:20rem;
+    min-height:10rem;
+    justify-content: left;
+     align-items: flex-start;
+     padding-left:1.5rem ;
+ }
+ .dbBtn{
+  transform: translateY(7rem);
+ }
+  .cards{  
   min-height:100rem;
   overflow: hidden;
-
   }
   .cards_container1{
-    
     min-width:1rem;
-   
-
+    margin-right:4.4rem;
   }
   .cards_container2{
     min-width:1rem;
@@ -416,7 +446,7 @@ color: #2598ce;
   justify-content:center;
   align-items: center;
   text-align:center;
-  width:40rem;
+  max-width:40rem;
   height:35rem;
   margin-top: 3em;
   transform: translateX(30vh);
@@ -427,7 +457,7 @@ color: #2598ce;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width:40rem;
+  max-width:40rem;
   height:35rem;
   margin-top: 3em;
   transform: translateX(-30vh);

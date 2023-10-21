@@ -2,7 +2,6 @@ import React, { useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SignIn from './signin';
-import SignUp from './signup';
 import Session from './session';
 import Home from './home';
 import DB from './db';
@@ -17,8 +16,6 @@ function App() {
   const [translateText4, setTranslateText4] = useState([]);
   const [num,setNum]=useState(0);
   const [num2,setNum2]=useState(0);
-  const [profile, setProfiles] = useState([]);
-  const [profile2, setProfiles2] = useState([]);
   const [sessionName, setSessionName] = useState("");
   const [sessionName1, setSessionName1] = useState([]);
   const [names, setNames] = useState("");
@@ -83,7 +80,7 @@ function App() {
         <Route path='/' element={<SignIn setNames={setNames} names={names}/>}/>
         <Route path='/Session' element={<Session names={names} sessionName={sessionName} setSessionName={setSessionName} sessionName1={sessionName1} setSessionName1={setSessionName1}/>}/>
           <Route path="Session/home" element={<Home preventD1 = {preventD1} preventD2 = {preventD2} inputText ={inputText} inputText2 ={inputText2} inputTextHandler = {inputTextHandler} inputTextHandler2 ={inputTextHandler2}/>}/>
-          <Route path='Session/home/DB' element={<DB setProfiles={setProfiles} setProfiles2={setProfiles2} trn={translaText1} trn2={translaText2}/>}/>
+          <Route path='Session/home/DB' element={<DB  trn={translaText1} trn2={translaText2}/>}/>
           <Route path='Session/home/DB/Cards'  element={<Cards newestArray2={newestArray2} newestArray={newestArray}setTranslateText2={setTranslateText2} translateText2={translateText2}setTranslateText={setTranslateText}translateText={translateText} setTranslateText4={setTranslateText4} translateText4={translateText4}translateText3={translateText3} setTranslateText3={setTranslateText3}newArr={newArr} newArr2={newArr2}trn={translaText1} trn2={translaText2}/>}/>
       </Routes>
 </Router>
