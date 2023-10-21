@@ -38,6 +38,7 @@ function Cards(props){
     },[ID,ID2])
    
     return(
+        
 <div className='cards'>
         <div className='cards_container1'>
             <div className='card1' onClick={getID}>{props.newestArray[0]}</div>

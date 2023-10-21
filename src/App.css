@@ -8,6 +8,7 @@
     font-family:hahmlet, sans-serif;
     min-height: 100vh;
     background-image: linear-gradient(to right top, #51aeda, #2598ce);
+    overflow-y:hidden;
   }
 
   header{
@@ -375,31 +376,33 @@ color: #2598ce;
   height:1.5rem;
   transform: translate(-40em,41rem);
 }
+
 @media(max-width:600px){
   
   .cards{
-    flex-wrap: wrap;
-    height:100vh;
+    
+  min-height:100rem;
+  overflow: hidden;
 
   }
   .cards_container1{
-    margin-bottom: 10px;
-    margin-left:10em;
-    width:10rem;
-    height:5rem;
+    
+    min-width:1rem;
+   
 
   }
   .cards_container2{
-    margin-right:10em;
-    width:10rem;
-    height:5rem;
-    position: absolute;
+    min-width:1rem;
     
   }
   .reset{
     position: absolute;
   }
+  .cli{
+       margin:0;
+  }
 }
+
 .cards{
   list-style: none;
   display: flex;
@@ -415,7 +418,8 @@ color: #2598ce;
   text-align:center;
   width:40rem;
   height:35rem;
-  transform: translateY(10vh);
+  margin-top: 3em;
+  transform: translateX(30vh);
 }
 .cards_container2{
   display:flex;
@@ -425,7 +429,8 @@ color: #2598ce;
   text-align: center;
   width:40rem;
   height:35rem;
-  transform:translateY(10vh);
+  margin-top: 3em;
+  transform: translateX(-30vh);
 }
 
 .cli{
@@ -433,7 +438,7 @@ color: #2598ce;
       background: transparent;
       color: #ffffff;
     font-size: small;
-      min-height: 3.5em;
+      max-height: 3.5em;
       min-width: 7.5em;
       margin:10px 120px 10px 120px;
       cursor: pointer;
