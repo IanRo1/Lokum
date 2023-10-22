@@ -20,18 +20,15 @@ function DB(props){
     <form>
       <div className='db_Container'>
         <div className='column_one'>
-       <p className='p_Text'>
         <ol>
         {props.trn}
         </ol>
-        </p>
         </div>
         <div className='column_two' >
-          <p className='p_Text2'>
             <ol>
             {props.trn2}
             </ol>
-        </p>
+       
        </div>
       </div>
       <div className='Btn2'>

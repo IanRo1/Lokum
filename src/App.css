@@ -317,30 +317,31 @@ overflow:hidden;
 }
 .column_one{
   display: flex;
-  justify-content:center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   border:solid white;
   min-width:20rem;
-  min-height:35rem;
   max-height: 35rem;
   transform:translateY(10vh);
   overflow: scroll;
   overflow-y:auto;
-  padding-left: 1em;
+   padding-left: 2em;
+  padding-top: .5em;
   overflow-x: hidden;
   
 }
 .column_two{
   display:flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   border:solid white;
   min-width:20rem;
   min-height:35rem;
   transform:translateY(10vh);
   overflow: scroll;
   overflow-y:auto;
-  padding-left: 1em;
+  padding-left: 2em;
+  padding-top: .5em;
   overflow-x: hidden;
   
 }
@@ -376,42 +377,75 @@ color: #2598ce;
   height:1.5rem;
   transform: translate(-40em,41rem);
 }
+@media(max-width:1030px){
+   .Database{
+     overflow: visible;
+   }
+   .column_one{
+    
+    min-width:12rem;
+     min-height: 30rem;
+     max-height: 10rem;
+    align-items: flex-start;
+    justify-content: left;
+    padding-left: 2rem;
+   padding-top: .5rem;
+     
+  }
+  .column_two{
+    min-width:12rem;
+    min-height: 30rem;
+    max-height: 10rem;
+   align-items: flex-start;
+   justify-content: left;
+   padding-left: 2rem;
+   padding-top: .5rem;
+     
+ }
 
-@media(max-width:900px){
+}
+
+
+@media(max-width:820px){
+
+  .Database{
+    overflow:visible;
+    
+  }
   .db_Container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
-  ol{
-    display: flex;
-    flex-direction: column;
-    column-count: 3;
-    flex-wrap: wrap;
-  }
+  
   .column_one{
     flex-direction: column;
-    flex-flow: column wrap;
-    flex-wrap: wrap;
     column-count: 3;
-     min-width:20rem;
-     min-height:10rem;
-     margin-bottom: 5rem;
-     justify-content: left;
-     align-items: flex-start;
+     min-width:9rem;
+     min-height: 10rem;
+     max-height: 10rem;
+     margin-bottom: 1rem;
+     justify-content: flex-start;
+     align-items: center;
      padding-left:1.5rem ;
+     overflow: scroll;
+     
+    
   }
   .column_two{
     flex-direction: column;
-    min-width:20rem;
-    min-height:10rem;
-    justify-content: left;
-     align-items: flex-start;
+    column-count: 3;
+     min-width:9rem;
+     min-height: 10rem;
+     max-height: 10rem;
+     margin-bottom: 3rem;
+     justify-content: flex-start;
+     align-items: center;
      padding-left:1.5rem ;
+     overflow: scroll;
  }
  .dbBtn{
-  transform: translateY(7rem);
+  transform: translateY(6rem);
  }
   .cards{  
   min-height:100rem;
@@ -419,7 +453,7 @@ color: #2598ce;
   }
   .cards_container1{
     min-width:1rem;
-    margin-right:4.4rem;
+    margin-right:8rem;
   }
   .cards_container2{
     min-width:1rem;
@@ -431,6 +465,25 @@ color: #2598ce;
   .cli{
        margin:0;
   }
+}
+@media(max-width:320px){
+  .Database{
+    overflow: hidden;
+    min-height: 100svh;
+  }
+  .dbBtn{
+    transform: translateY(6rem);
+   }
+   
+}
+@media(max-width:280px){
+  .Database{
+    overflow: hidden;
+  }
+  .dbBtn{
+    transform: translateY(1rem);
+   }
+   
 }
 
 .cards{
