@@ -19,7 +19,7 @@ function Home(props) {
    return (
      <div className="Home">
        <header>Lokum</header>
-     <form>
+     <form className='form1'>
       <p className='crtTxt'>Character Count = {char.length}/40</p>
       <div className='home1'>
         <div className='home2'>
