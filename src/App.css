@@ -37,7 +37,7 @@
     border: 2px solid #ffffff;
   background: transparent;
   color: #ffffff;
-  min-width: 8em;
+  min-width: 8.7em;
 font-size:16px;
   min-height: 3em;
   margin:10px 120px 10px 120px;
@@ -259,7 +259,7 @@ font-size:16px;
     max-width: 23em;
     max-height: 2.5em;
     resize:none;
-    margin:7em;
+    margin:6.5em;
     outline:gray;
     border: gray;
     border-radius: 5em;
@@ -548,10 +548,9 @@ color: #2598ce;
   justify-content:center;
   align-items: center;
   text-align:center;
-  max-width:40rem;
+  width:20rem;
   height:35rem;
-  margin-top: 3em;
-  transform: translateX(30vh);
+  transform: translateY(10vh);
 }
 .cards_container2{
   display:flex;
@@ -559,10 +558,10 @@ color: #2598ce;
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width:40rem;
+  width:20rem;
   height:35rem;
-  margin-top: 3em;
-  transform: translateX(-30vh);
+  transform:translateY(10vh);
+  
 }
 
 .cli{
@@ -599,11 +598,4 @@ color: #2598ce;
       cursor: pointer;
       transform:translateY(72vh)
 }
-.reset:hover{
-  background-color: white;
-color: #2598ce;
-}
-.reset:active{
-  background: transparent;
-    color: #ffffff;
-}
+
