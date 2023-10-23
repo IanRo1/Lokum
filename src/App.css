@@ -54,7 +54,7 @@ font-size:16px;
   }
   .signForm,.signForm2{
     display: flex;
-    justify-content:start;
+    justify-content:flex-start;
     align-items:center;
     flex-direction:column;
   height:23em;
@@ -330,6 +330,7 @@ overflow:hidden;
   padding-top: .5em;
   overflow-x: hidden;
   
+  
 }
 .column_two{
   display:flex;
@@ -345,6 +346,22 @@ overflow:hidden;
   padding-top: .5em;
   overflow-x: hidden;
   
+}
+.dltBtn{
+  display: flex;
+  align-items: center;
+ flex-direction: row;
+}
+
+.dltBtn2{
+  opacity: 0;
+  margin-left:.5rem;
+  font-size:small;
+  cursor: pointer;  
+  color: white;
+}
+.dltBtn2:hover{
+  opacity: 1;
 }
 .p_Text,.p_Text2{
   line-height:1.5em;
