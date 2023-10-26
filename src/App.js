@@ -47,13 +47,16 @@ function App() {
    /*Mapping Through Typed Input Values in State in Order to Build New Array with Accessible Values/IDs
     Needs to be Done Twice for Each Set of Values; One Set For Display That Can't Be Modified Through Comparison(translaText1&&2),
     And One Set That Can Be For Memorization Game(translaText3&&4)(Modified Later in cards.js Through Filter After ID Comparison)*/
-    const deleteLi=()=>{
-      setTranslateText(translaText1.filter((x) => x.id !== translaText1.id));
-      console.log(translaText1.id)
+    const deleteLi=(e)=>{
+      setTranslateText(translateText.filter((x) => x.id !== +e.currentTarget.id));
+      setTranslateText2(translateText2.filter((x) => x.id !== +e.currentTarget.id));
+      setTranslateText3(translateText3.filter((x) => x.id !== +e.currentTarget.id));
+      setTranslateText4(translateText4.filter((x) => x.id !== +e.currentTarget.id));
+      console.log(e.target.id)
     }
 
   const translaText1 = translateText.map(transText => {
-     return <div className='dltBtn' id={transText.id}><li>{transText.text}</li><p className='dltBtn2' onClick={deleteLi}>X</p></div>
+     return <div className='dltBtn'><li>{transText.text}</li><p className='dltBtn2' onClick={deleteLi} id={transText.id}>X</p></div>
   })
   
      const translaText2 = translateText2.map(transText2 => {
