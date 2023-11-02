@@ -17,7 +17,6 @@ function DB(props){
    /*Bringing Display Input Values From App.JS*/
     return(
    <div className='Database'>
-    <form>
       <div className='db_Container'>
         <div className='column_one'>
         <ol>
@@ -36,7 +35,6 @@ function DB(props){
       <button className="dbBtn">Test Your Memory!</button>
       </Link>
       </div>
-    </form>
    </div>
     );
 }
