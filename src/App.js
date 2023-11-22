@@ -60,8 +60,8 @@ function App() {
   })
   
      const translaText2 = translateText2.map(transText2 => {
-      return <div className='dltBtn'><li id={transText2.id}>
-        {transText2.text}</li><p className='dltBtn2'>x</p></div>
+      return <div className='dltBtn'><li>
+        {transText2.text}</li><p className='dltBtn2' onClick={deleteLi} id={transText2.id}>X</p></div>
      })
      /*Mapping Second Set of Typed Values for Comparison, but Only Displaying Last Typed Values[0], Otherwise All Values 
      Will Be Displayed*/

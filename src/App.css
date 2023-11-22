@@ -316,6 +316,7 @@ overflow:hidden;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+
 }
 
 .db_Container{
@@ -544,19 +545,14 @@ color: #2598ce;
   }
 }
 @media(max-width:320px){
-  .Database{
-    overflow: hidden;
-    min-height: 100svh;
-  }
+  
   .dbBtn{
     transform: translateY(6rem);
    }
    
 }
 @media(min-width:280px){
-  .Database{
-    overflow: hidden;
-  }
+  
   .dbBtn{
     transform: translateY(1rem);
    }
