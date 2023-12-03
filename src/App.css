@@ -355,6 +355,10 @@ flex-direction: column;
   overflow-x: hidden;
   
 }
+.Btn2{
+  margin-top: 1rem;
+}
+
 .dltBtn{
   display: flex;
   align-items: center;
@@ -417,10 +421,9 @@ color: #2598ce;
      overflow: visible;
    }
    .column_one{
-    
+    margin-top: 25%;
     min-width:12rem;
      min-height: 30rem;
-     max-height: 10rem;
     align-items: flex-start;
     justify-content: left;
     padding-left: 2rem;
@@ -428,25 +431,32 @@ color: #2598ce;
      
   }
   .column_two{
+    margin-top: 25%;
     min-width:12rem;
     min-height: 30rem;
-    max-height: 10rem;
    align-items: flex-start;
    justify-content: left;
    padding-left: 2rem;
    padding-top: .5rem;
-     
  }
-
+.Btn2{
+  padding-top: 1rem;
+}
 }
 @media (width:912px){
   .cards{
     min-width:100%;
     overflow:visible;
   }
+  .Btn2{
+    padding-top: 1rem;
+  }
 }
 
 @media(max-width:820px){
+  .Btn2{
+    padding-top: 1rem;
+  }
    button{
     min-width:7rem;
     min-height:2.5rem;
@@ -500,28 +510,31 @@ color: #2598ce;
   .column_one{
     flex-direction: column;
     column-count: 3;
-     min-width:9rem;
+     min-width:15rem;
      min-height: 10rem;
-     max-height: 10rem;
+     max-height: 20rem;
      margin-bottom: 1rem;
      justify-content: flex-start;
      align-items: center;
      padding-left:1.5rem ;
-     overflow: scroll;
+     overflow: hidden;
      
     
   }
   .column_two{
     flex-direction: column;
     column-count: 3;
-     min-width:9rem;
-     min-height: 10rem;
-     max-height: 10rem;
+    min-width:15rem;
+    min-height: 10rem;
+    max-height: 20rem;
      margin-bottom: 3rem;
      justify-content: flex-start;
      align-items: center;
      padding-left:1.5rem ;
-     overflow: scroll;
+     overflow: hidden;
+ }
+ .Btn2{
+  padding-top:10%;
  }
  .dbBtn{
   transform: translateY(6rem);

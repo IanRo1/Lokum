@@ -17,8 +17,6 @@ function SignIn(props){
    const clrTxt=()=>{
     setNames2("");
    }
-
-   
         return(
        <div className='Sign-In'>
         <header className='signinText'>Hi! Welcome to Lokum! What's your name?</header>
