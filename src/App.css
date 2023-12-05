@@ -52,6 +52,13 @@ font-size:16px;
     background: transparent;
       color: #ffffff;
   }
+
+  .savedDB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+  }
   .signForm,.signForm2{
     display: flex;
     justify-content:flex-start;

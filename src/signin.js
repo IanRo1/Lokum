@@ -25,7 +25,7 @@ function SignIn(props){
           <div className='formDiv'>
          <input type="text" className='enterData' name='userName' value={props.names2} onChange={getTxt1}></input>
          </div>
-         <Link to='Session'>
+         <Link to='SavedSess'>
          <button className='signBtn' onClick={clrTxt}>Select Your Name</button>
          </Link>
          </div>
