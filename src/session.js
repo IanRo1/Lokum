@@ -21,6 +21,7 @@ function Session(props){
     props.setSessionName("");
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
+    props.setSessActive(true)
   }
   const toggIcon=()=>{
     setActive(!active);
