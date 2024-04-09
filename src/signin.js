@@ -9,7 +9,6 @@ function SignIn(props){
    /*SignIn Portion*/
   
   const [names2, setNames2] = useState(props.names);
-
   const getTxt1 =(e)=>{
     e.preventDefault();
     props.setNames(e.target.value);
@@ -26,15 +25,9 @@ function SignIn(props){
           <div className='formDiv'>
          <input type="text" className='enterData' name='userName' value={props.names2} onChange={getTxt1}></input>
          </div>
-         {props.sessionName1?(
-          <>
          <Link to='SavedSess'>
          <button className='signBtn' onClick={clrTxt}>Select Your Name</button>
          </Link>
-         </>
-         ):(<Link to='Session'>
-         <button className='signBtn' onClick={clrTxt}>Select Your Name</button>
-         </Link>)}
          </div>
         </form>
        </div>

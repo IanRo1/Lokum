@@ -41,6 +41,9 @@ function Home(props) {
        <Link to='DB'>
        <button className='btn3'> Go to Database!</button>
        </Link>
+       <Link to='/SavedSess'>
+       <button className='btn4'> Return to Sessions!</button>
+       </Link>
        </div>
  </form>
      </div>

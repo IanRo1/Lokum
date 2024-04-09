@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function SavedSess(props){
     const [sessIndex, setSessIndex]= useState(0);
     const [active, setActive] = useState(false);
-    const [icon, setIcon] = useState(<Link to='session'><button className='return'></button></Link>);
+    const [icon, setIcon] = useState(<Link to='session'><button className='return'>No Previous Saves Detected</button></Link>);
 
     useEffect(()=>{
         if(props.sessActive === true){
@@ -37,8 +37,9 @@ function SavedSess(props){
         {active?(
           <>
         <div className='sDB1'>
-        <Link to='session'>{sessionNames[sessIndex]}</Link>
+        <Link to='session/home'>{sessionNames[sessIndex]}</Link>
             <button className='arrLeft' onClick={prevSess}>arrow left</button>
+            <Link to='session'><button className='sessBtn'>Session Lists</button></Link>
             <button className='arrRight' onClick={nextSess}>arrow right</button>
         </div>
         </>
