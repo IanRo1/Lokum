@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import {Link} from 'react-router-dom';
 
@@ -13,6 +13,14 @@ function Session(props){
     props.setSessionName(e.target.value);
     console.log(e.target.value)
    }
+
+   useEffect(()=>{
+    if(ids >= 6){
+      setIcon(false)
+      setIcon('Users can only make 6 profiles at a time')
+      setActive(false)
+    }
+ },[ids])
    
   const deleteName=(e)=>{
     e.preventDefault();
@@ -22,6 +30,7 @@ function Session(props){
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
     props.setSessActive(true)
+    console.log(ids)
   }
   const toggIcon=()=>{
     setActive(!active);
@@ -40,7 +49,7 @@ function Session(props){
           <>
           <div className='sessDiv2'>
         <input className='hiddName' name="hiddName" type="text" value={props.sessionName}onChange={getTxt}></input>
-        <button className='submitBtn' onClick={deleteName}>Submit</button>
+        <button className='submitBtn' id='submitBtn' onClick={deleteName}>Submit</button>
         </div>
         </>
         ):("")}
