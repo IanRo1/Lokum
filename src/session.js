@@ -16,7 +16,6 @@ function Session(props){
 
    useEffect(()=>{
     if(ids >= 6){
-      setIcon(false)
       setIcon('Users can only make 6 profiles at a time')
       setActive(false)
     }
@@ -25,12 +24,12 @@ function Session(props){
   const deleteName=(e)=>{
     e.preventDefault();
     setIds(ids+1)
-    props.setSessionName1([...props.sessionName1,{text:props.sessionName,key: ids}]);
+    props.setSessionName1([...props.sessionName1,{text:props.sessionName,key: ids}].slice(0,6));
     props.setSessionName("");
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
     props.setSessActive(true)
-    console.log(ids)
+    console.log(props.sessionName1)
   }
   const toggIcon=()=>{
     setActive(!active);
