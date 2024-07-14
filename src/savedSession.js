@@ -16,7 +16,7 @@ function SavedSess(props){
      },[active, icon])
 
     const sessionNames =[props.sessionName1.map(ssnName => {
-        return <div className='ssnTxt'>{ssnName.text}</div>})][0];
+        return <button className='ssnTxt'>{ssnName.text}</button>})][0];
 
     function prevSess(){
         setSessIndex(index =>{
@@ -38,6 +38,8 @@ function SavedSess(props){
           <>
         <div className='sDB1'>
         <Link to='session/home'>{sessionNames[sessIndex]}</Link>
+        </div>
+        <div className='sDB2'>
             <button className='arrLeft' onClick={prevSess}>arrow left</button>
             <Link to='session'><button className='sessBtn'>Session Lists</button></Link>
             <button className='arrRight' onClick={nextSess}>arrow right</button>

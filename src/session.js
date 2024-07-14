@@ -36,8 +36,8 @@ function Session(props){
     setIcon(!icon);
   }
   const sessionNames =[props.sessionName1.map(ssnName => {
-    return <div key={ssnName.key} className='ssnTxt'>{ssnName.text}</div>})][0].slice(0,6);
-
+    return <button key={ssnName.key} className='ssnTxt1'>{ssnName.text}</button>})][0].slice(0,6);
+/* deleteName= SEND Request; make new objects with the capacity to store different words/definitions. */
   return (
     <div className='profile'>
         <p className='profName'>{props.names}'s Profile</p>

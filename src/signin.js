@@ -17,6 +17,8 @@ function SignIn(props){
    const clrTxt=()=>{
     setNames2("");
    }
+
+   /* 1st clrTxt= SEND Request; store name */
         return(
        <div className='Sign-In'>
         <header className='signinText'>Hi! Welcome to Lokum! What's your name?</header>

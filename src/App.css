@@ -42,12 +42,10 @@
     border: 2px solid #ffffff;
   background: transparent;
   color: #ffffff;
-  min-width: 8.7em;
-font-size:16px;
-  min-height: 3em;
-  margin:10px 120px 10px 120px;
+  min-width: 10.5em;
+  margin:3px 30px 3px 30px;
   cursor: pointer;
-  padding:.5em;
+  padding:.8em;
   
   }
   button:hover{
@@ -63,8 +61,40 @@ font-size:16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height:100vh;
   }
+  .sDB1{
+    height:20em;
+  }
+  .ssnTxt{
+    margin: 1em;
+    border: 2px solid #ffffff;
+    color:white;
+    cursor:pointer;
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    min-height:12em;
+    min-width:14em;
+    padding:.5em;
+ }
+ .ssnTxt1{
+  margin: 1em;
+  border: 2px solid #ffffff;
+  color:white;
+  cursor:pointer;
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  min-height:5em;
+  min-width:7em;
+  padding:.5em;
+ }
   .signForm,.signForm2{
     display: flex;
     justify-content:flex-start;
@@ -177,7 +207,7 @@ font-size:16px;
     border: 2px solid #ffffff;
     overflow: hidden;
     background: transparent;
-    transform: translateX(8.1em);
+    transform: translateX(4.1em);
   }
   .submitBtn{
     min-height:2.95em;
@@ -188,7 +218,7 @@ font-size:16px;
      font-size:x-small;
        cursor: pointer;
        overflow:hidden;
-       transform: translateX(-10.5em);
+       transform: translateX(-6.9em);
   }
   .profileCont{
     display: flex;
@@ -199,20 +229,7 @@ font-size:16px;
     text-align:start;
     
   }
-  .ssnTxt{
-     margin: 1em;
-     border: 2px solid #ffffff;
-     color:white;
-     cursor:pointer;
-     display: flex;
-     font-size: large;
-     justify-content: center;
-     align-items: center;
-     text-align:center;
-     min-height:5em;
-     min-width:6em;
-     padding:.5em;
-  }
+  
 .addBtn{
   min-height:3em;
     min-width:7em;
