@@ -8,6 +8,9 @@ function Cards(props){
 
  const [ID, setIDs] = useState(null);
  const [ID2, setIDs2] = useState(null);
+ const [Counter, setCounter] = useState(0);
+ 
+ 
 
  /*Function to Transfer Display Values(TranslateText1 && 2) from App.JS To The Active Values(TranslateText3 && 4),
  Sets IDs Back to Null, Otherwise Comparison If() Function Below in UseEffect Won't Work Properly*/
@@ -23,9 +26,11 @@ function Cards(props){
 
     const getID =(e) => {
         setIDs(+e.target.id)
+        setCounter(Counter+1)
       }
       const getID2 =(e) => {
         setIDs2(+e.target.id) 
+        setCounter(Counter+1)
       }
       /*UseEffect to Constantly Check If Clicked IDs in State Match IDs of Active Values(TransferText 3&4); 
       If So, They Are Reduced*/
@@ -36,6 +41,15 @@ function Cards(props){
         props.setTranslateText4(props.translateText4.filter((x) => x.id !== ID2));
        }
     },[ID,ID2])
+
+    useEffect(()=>{
+        if(Counter === 2){
+            setIDs(null);
+            setIDs2(null);
+            setCounter(Counter === 0)
+        }
+     },[Counter, setIDs, setIDs2])
+    
    
     return(
         
