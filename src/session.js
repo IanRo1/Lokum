@@ -8,15 +8,19 @@ function Session(props){
   const [ids,setIds]=useState(0);
   const [active, setActive] = useState(false);
   const [icon, setIcon] = useState(<button className='addBtn'>New Session</button>);
+  const [session1,setSession1]=useState(0);
+  const [session2,setSession2]=useState(0);
+  const [session3,setSession3]=useState(0);
+  const [session4,setSession4]=useState(0);
+  const [sessionnameKey, setsessionnameKey] = useState([]);
 
   const getTxt =(e)=>{
     props.setSessionName(e.target.value);
-    console.log(e.target.value)
    }
 
    useEffect(()=>{
-    if(ids >= 6){
-      setIcon('Users can only make 6 profiles at a time')
+    if(ids >= 4){
+      setIcon('Users can only make 4 sessions at a time')
       setActive(false)
     }
  },[ids])
@@ -29,14 +33,14 @@ function Session(props){
     setIcon(<button className='addBtn'>New Session</button>)
     setActive(!active)
     props.setSessActive(true)
-    console.log(props.sessionName1)
   }
+
   const toggIcon=()=>{
     setActive(!active);
     setIcon(!icon);
   }
   const sessionNames =[props.sessionName1.map(ssnName => {
-    return <button key={ssnName.key} className='ssnTxt1'>{ssnName.text}</button>})][0].slice(0,6);
+    return <button key={ssnName.key} id={ssnName.key} className='ssnTxt1'>{ssnName.text}</button>})][0].slice(0,4);
 /* deleteName= SEND Request; make new objects with the capacity to store different words/definitions. */
   return (
     <div className='profile'>

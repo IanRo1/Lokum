@@ -10,12 +10,13 @@ function Home(props) {
   const charTxt=(e)=>{
     props.inputTextHandler(e);
   setChar(e.target.value);
+  console.log(props.ids)
   }
   const charTxt2=(e)=>{
     props.inputTextHandler2(e);
   setChar(e.target.value);
   }
-
+/* preventD1/D2= SEND Request;send definitions to right previously selected object */
    return (
      <div className="Home">
        <header>Lokum</header>

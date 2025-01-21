@@ -101,9 +101,3 @@ function App() {
 }
 
 export default App;
-/* To divide each array element by spaces: 
-  const translaText2 = translateText2.map(transText2 => (
-      transText2.text.split(/\s+/).map(spltTxt1 =>{
-        return <li>{spltTxt1}</li>
-     })
-     trn2={translaText2.slice(-1)[0]} */
